@@ -1,0 +1,5633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AttributeDialog</class>
+ <widget class="QDialog" name="AttributeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>624</width>
+    <height>424</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>479</width>
+    <height>189</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>100000</width>
+    <height>100000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>属性表</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/属性.png</normaloff>:/属性.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_15">
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="colorDialog">
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QWidget" name="widget_35" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QWidget" name="widget_29" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_31">
+             <item>
+              <widget class="QWidget" name="widget_25" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_26">
+                <item>
+                 <spacer name="horizontalSpacer_63">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="penLabel">
+                  <property name="text">
+                   <string>画笔颜色：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_64">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_28" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_2" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_25">
+                   <item>
+                    <widget class="QLabel" name="penRlabel">
+                     <property name="text">
+                      <string>R:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="penRSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="penGlabel">
+                     <property name="text">
+                      <string>G:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="penGSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="penBlabel">
+                     <property name="text">
+                      <string>B:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="penBSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_27" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <item>
+                    <widget class="QLabel" name="penHlabel">
+                     <property name="text">
+                      <string>H:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="penHSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>359</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="penSlabel">
+                     <property name="text">
+                      <string>S:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="penSSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="penVlabel">
+                     <property name="text">
+                      <string>V:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="penVSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_26" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_27">
+                <item>
+                 <spacer name="horizontalSpacer_65">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="penAlabel">
+                  <property name="text">
+                   <string>A:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="penASpinBox">
+                  <property name="styleSheet">
+                   <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_66">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_33" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_32">
+             <item>
+              <widget class="QWidget" name="widget_30" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <spacer name="horizontalSpacer_70">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="brushLabel">
+                  <property name="text">
+                   <string>画刷颜色：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_69">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_34" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <item>
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_3" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_29">
+                   <item>
+                    <widget class="QLabel" name="brushRlabel">
+                     <property name="text">
+                      <string>R:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="brushRSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="brushGlabel">
+                     <property name="text">
+                      <string>G:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="brushGSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="brushBlabel">
+                     <property name="text">
+                      <string>B:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="brushBSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_31" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_30">
+                   <item>
+                    <widget class="QLabel" name="brushHlabel">
+                     <property name="text">
+                      <string>H:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="brushHSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>359</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="brushSlabel">
+                     <property name="text">
+                      <string>S:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="brushSSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="brushVlabel">
+                     <property name="text">
+                      <string>V:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="brushVSpinBox">
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                     </property>
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_32" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_28">
+                <item>
+                 <spacer name="horizontalSpacer_67">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="brushAlabel">
+                  <property name="text">
+                   <string>A:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="brushASpinBox">
+                  <property name="styleSheet">
+                   <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_68">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="selectlabel">
+               <property name="text">
+                <string>切换属性：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="colorComboBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>26</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pointSizeDialog">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QWidget" name="widget_36" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_33">
+          <item>
+           <spacer name="horizontalSpacer_71">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="pointXlabel">
+            <property name="text">
+             <string>当前点X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_72">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="pointXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_73">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="pointYlabel">
+            <property name="text">
+             <string>当前点Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="pointYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_74">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="pointSizelabel">
+            <property name="text">
+             <string>   当前点大小：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="pointSizeSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>size : </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_5" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="selectlabel_2">
+            <property name="text">
+             <string>切换属性：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="pointSizeComboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>26</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="lineSizeDialog">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QWidget" name="widget_7" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <spacer name="horizontalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lineStartXlabel">
+            <property name="text">
+             <string>起始点X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="lineStartXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lineEndXlabel">
+            <property name="text">
+             <string>起始点Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="lineStartYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_16">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_8" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lineStartYlabel">
+            <property name="text">
+             <string>结束点X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="lineEndXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_17">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lineEndYlabel">
+            <property name="text">
+             <string>结束点Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="lineEndYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_18">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_6" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <spacer name="horizontalSpacer_19">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="selectlabel_3">
+            <property name="text">
+             <string>切换属性：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_20">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="lineSizeComboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>26</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_21">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="polylineDialog"/>
+     <widget class="QWidget" name="rectangleDialog">
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QWidget" name="widget_13" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <spacer name="horizontalSpacer_36">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="rectangleTopLeftXlabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+background: transparent;
+color: #000000;
+border-radius: 4px;
+padding: 3px;
+}</string>
+            </property>
+            <property name="text">
+             <string>左上角X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_37">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="rectangleTopLeftXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_38">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="rectangleTopLeftYlabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+background: transparent;
+color: #000000;
+border-radius: 4px;
+padding: 3px;
+}</string>
+            </property>
+            <property name="text">
+             <string>左上角Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_39">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="rectangleTopLeftYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_40">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_14" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <spacer name="horizontalSpacer_41">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="rectangleBottomRightXlabel">
+            <property name="text">
+             <string> 右下角X坐标： </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_42">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="rectangleBottomRightXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_43">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="rectangleBottomRightYlabel">
+            <property name="text">
+             <string> 右下角Y坐标： </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_44">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="rectangleBottomRightYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_45">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_12" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <spacer name="horizontalSpacer_33">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="selectlabel_5">
+            <property name="text">
+             <string>切换属性：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_34">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="rectangleSizeComboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>26</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_35">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="circleDialog">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QWidget" name="widget_9" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <spacer name="horizontalSpacer_22">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="circleCenterXlabel">
+            <property name="text">
+             <string>圆心X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_23">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="circleCenterXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_24">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="circleCenterYlabel">
+            <property name="text">
+             <string>圆心Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_25">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="circleCenterYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_26">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_11" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <spacer name="horizontalSpacer_30">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="radiuslabel">
+            <property name="text">
+             <string>   半径：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_31">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="circleRadiusSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>radius : </string>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_32">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_10" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <spacer name="horizontalSpacer_27">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="selectlabel_4">
+            <property name="text">
+             <string>切换属性：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_28">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="circleSizeComboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>26</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_29">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="sectorDialog">
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QWidget" name="widget_21" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_22">
+          <item>
+           <spacer name="horizontalSpacer_52">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="sectorCenterXlabel">
+            <property name="text">
+             <string>扇形中心X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_53">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="sectorCenterXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_54">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="sectorCenterYlabel">
+            <property name="text">
+             <string>扇形中心Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_55">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="sectorCenterYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_56">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_24" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QWidget" name="widget_22" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_24">
+             <item>
+              <spacer name="horizontalSpacer_57">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="sectorStartAnglelabel">
+               <property name="text">
+                <string>   起始角：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_58">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="sectorStartAngleSpinBox">
+               <property name="styleSheet">
+                <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+               </property>
+               <property name="suffix">
+                <string>°</string>
+               </property>
+               <property name="prefix">
+                <string>angle : </string>
+               </property>
+               <property name="minimum">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <number>360</number>
+               </property>
+               <property name="displayIntegerBase">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_59">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_23" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_23">
+             <item>
+              <spacer name="horizontalSpacer_60">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="sectorEndAnglelabel">
+               <property name="text">
+                <string>   结束角：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_61">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="sectorEndAngleSpinBox">
+               <property name="styleSheet">
+                <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+               </property>
+               <property name="suffix">
+                <string>°</string>
+               </property>
+               <property name="prefix">
+                <string>angle : </string>
+               </property>
+               <property name="minimum">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <number>360</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_62">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_20" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_21">
+          <item>
+           <spacer name="horizontalSpacer_49">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="selectlabel_7">
+            <property name="text">
+             <string>切换属性：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_50">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="sectorSizeComboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>26</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_51">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="polygonDialog"/>
+     <widget class="QWidget" name="curveDialog">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="widget_15" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QLabel" name="curveStartXlabel">
+            <property name="text">
+             <string>起始点X坐标： </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveStartXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="curveStartYlabel">
+            <property name="text">
+             <string>起始点Y坐标： </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveStartYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_17" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_18">
+          <item>
+           <widget class="QLabel" name="curveControl1Xlabel">
+            <property name="text">
+             <string>控制点1X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveControl1XSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="curveControl1Ylabel">
+            <property name="text">
+             <string>控制点1Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveControl1YSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_18" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <item>
+           <widget class="QLabel" name="curveControl2Xlabel">
+            <property name="text">
+             <string>控制点2X坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveControl2XSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="curveControl2Ylabel">
+            <property name="text">
+             <string>控制点2Y坐标：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveControl2YSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_16" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <item>
+           <widget class="QLabel" name="curveEndXlabel">
+            <property name="text">
+             <string>结束点X坐标： </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveEndXSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>X : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="curveEndYlabel">
+            <property name="text">
+             <string>结束点Y坐标： </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="curveEndYSpinBox">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+            <property name="suffix">
+             <string> mm</string>
+            </property>
+            <property name="prefix">
+             <string>Y : </string>
+            </property>
+            <property name="minimum">
+             <number>-999999</number>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_19" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_20">
+          <item>
+           <spacer name="horizontalSpacer_46">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="selectlabel_6">
+            <property name="text">
+             <string>切换属性：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_47">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="curveSizeComboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>26</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_48">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="textDialog">
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 1ex; /* leave space at the top for the title */
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    padding: 0 3px;
+}</string>
+         </property>
+         <property name="title">
+          <string>字体设置</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_38">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <widget class="QWidget" name="widget_40" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout_12">
+               <item>
+                <widget class="QWidget" name="widget_38" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_35">
+                  <item>
+                   <spacer name="horizontalSpacer_78">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="fontlabel">
+                    <property name="text">
+                     <string>          字体： </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_79">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QFontComboBox" name="fontFamilyComboBox">
+                    <property name="styleSheet">
+                     <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                    </property>
+                    <property name="currentIndex">
+                     <number>520</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_80">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="widget_39" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_36">
+                  <item>
+                   <spacer name="horizontalSpacer_81">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="fontSizelabel">
+                    <property name="text">
+                     <string>   字体大小： </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_82">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="fontSizeSpinBox">
+                    <property name="styleSheet">
+                     <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                    </property>
+                    <property name="suffix">
+                     <string> mm</string>
+                    </property>
+                    <property name="prefix">
+                     <string>Size : </string>
+                    </property>
+                    <property name="minimum">
+                     <number>0</number>
+                    </property>
+                    <property name="maximum">
+                     <number>99</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_83">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="widget_41" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_37">
+                  <item>
+                   <spacer name="horizontalSpacer_84">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="fontWeightlabel">
+                    <property name="text">
+                     <string>    字体粗细： </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_85">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="fontWeightSpinBox">
+                    <property name="styleSheet">
+                     <string notr="true">QSpinBox{
+border-radius: 3px;
+padding: 0 5px;
+color: #000000;
+border: 1px solid #969696;
+background-color: #F5F5F5 ;
+min-height: 25px;
+}
+QSpinBox:hover{
+border: 1px solid #00BB9E;
+}
+QSpinBox:selected{
+border: 1px solid #00BB9E;
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::up-button{/*显示按钮=0*/
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: top right;
+right: 2px;
+top: 2px;
+bottom: 1px;
+border-image: url(:/icon/triangle_up_969696.png);
+}
+QSpinBox::up-button:hover{
+border-image: url(:/icon/triangle_up_00BB9E.png);
+}
+QSpinBox::up-button:pressed{
+border-image: url(:/icon/triangle_up_262829.png);
+}
+QSpinBox[buttonSymbols=&quot;0&quot;]::down-button{
+width: 20px;
+height: 14px;
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+right: 2px;
+bottom: 2px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QSpinBox::down-button:hover{
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QSpinBox::down-button:pressed{
+border-image: url(:/icon/triangle_down_262829.png);
+}
+QSpinBox:disabled{
+color: #DCE1E6;
+background-color:#F5F5F5;
+border: 1px solid #969696;
+}
+QSpinBox::up-button:disabled{
+border-image: url(:/icon/triangle_up_404244.png);
+}
+QSpinBox::down-button:disabled{
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                    </property>
+                    <property name="suffix">
+                     <string> mm</string>
+                    </property>
+                    <property name="prefix">
+                     <string>Weight : </string>
+                    </property>
+                    <property name="minimum">
+                     <number>0</number>
+                    </property>
+                    <property name="maximum">
+                     <number>99</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_86">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="widget_37" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_34">
+                  <item>
+                   <spacer name="horizontalSpacer_75">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="selectlabel_8">
+                    <property name="text">
+                     <string>切换属性：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_76">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="fontComboBox">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>26</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QComboBox {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-height: 20px;
+}
+QComboBox:item{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:hover{
+border: 1px solid #00BB9E;
+}
+QComboBox:selected{
+border: 1px solid #00BB9E;
+}
+QComboBox:editable{
+background-color: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+}
+QComboBox:editable:disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+border: 1px solid #969696;
+background: qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #F2F3F4 , stop:1 #E7E9EB);
+selection-background-color: #00BB9E; /* 整个下拉窗体被选中项的背景色 */
+}
+QComboBox QAbstractItemView::item {
+height: 20px;
+}
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-position: center right;
+right: 2px;
+border: 0;
+background-color: transparent;
+}
+QComboBox::down-arrow {/*替换三角小图标*/
+width: 20px;
+height: 20px;
+border-image: url(:/icon/triangle_down_969696.png);
+}
+QComboBox::down-arrow:hover {
+border-image: url(:/icon/triangle_down_00BB9E.png);
+}
+QComboBox::disabled{
+color: #DCE1E6;
+background-color: #F5F5F5;
+border: 1px solid #969696;
+}
+QComboBox::down-arrow:disabled {
+border-image: url(:/icon/triangle_down_404244.png);
+}</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_77">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <item>
+             <widget class="QCheckBox" name="italicCheckBox">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>是否斜体</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="boldCheckBox">
+              <property name="text">
+               <string>是否加粗</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="strikeOutCheckBox">
+              <property name="text">
+               <string>是否添加删除线</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="underCheckBox">
+              <property name="text">
+               <string>是否添加下划线</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="capsLkCheckBox">
+              <property name="text">
+               <string>是否首字母大写</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pixmapDialog"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

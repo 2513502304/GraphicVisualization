@@ -1,0 +1,44 @@
+﻿  uic AttributeDialog.ui
+  uic MainWindow.ui
+  rcc res.qrc
+  moc MachineLearning.h
+  moc Interpolation.h
+  moc LayerScene.h
+  moc NetworkAnalysis.h
+  moc AttributeDialog.h
+  moc GraphItem.h
+  moc LayerManagement.h
+  moc LayerView.h
+  moc MainWindow.h
+   C:\Users\admin\source\repos\GraphicVisualization\GraphicVisualization\GraphItem.h(93): Warning: Class GraphItem implements the interface QGraphicsItem but does not list it in Q_INTERFACES. qobject_cast to QGraphicsItem will not work!
+  AttributeDialog.cpp
+  DecisionTree.cpp
+  GraphItem.cpp
+  Interpolation.cpp
+  LayerScene.cpp
+  MachineLearning.cpp
+  ShortestPath.cpp
+  Chess.cpp
+  ConvexHull.cpp
+  CPython.cpp
+  IDW.cpp
+  LayerManagement.cpp
+  LayerView.cpp
+  main.cpp
+  MainWindow.cpp
+  NetworkAnalysis.cpp
+C:\Users\admin\source\repos\GraphicVisualization\GraphicVisualization\DecisionTree.cpp(346): warning C4715: “DecisionTree::buildTree”: 不是所有的控件路径都返回值
+  TIN.cpp
+  ToolManagement.cpp
+C:\Users\admin\source\repos\GraphicVisualization\GraphicVisualization\MainWindow.cpp(363): warning C4715: “``MainWindow::initLayerManagement'::`2'::<lambda_2>::operator()'::`8'::<lambda_1>::operator()”: 不是所有的控件路径都返回值
+  qrc_res.cpp
+  moc_MachineLearning.cpp
+  moc_Interpolation.cpp
+  moc_LayerScene.cpp
+  moc_NetworkAnalysis.cpp
+  moc_AttributeDialog.cpp
+  moc_GraphItem.cpp
+  moc_LayerManagement.cpp
+  moc_LayerView.cpp
+  moc_MainWindow.cpp
+  GraphicVisualization.vcxproj -> C:\Users\admin\source\repos\GraphicVisualization\x64\Release\GraphicVisualization.exe
